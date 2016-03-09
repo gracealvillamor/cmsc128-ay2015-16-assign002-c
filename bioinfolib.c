@@ -41,7 +41,9 @@ int main () {
 					input1[strcspn(input1, "\n")] = 0; //strcspn searches for the \n character and delimits it
 					input2[strcspn(input2, "\n")] = 0; //strcspn searches for the \n character and delimits it
 					int distance = getHammingDistance(input1, input2);
-					printf("Hamming Distance: %d\n", distance);
+
+					if(distance == -1) printf("Error! Strings are not equal!\n"); //error message
+					else printf("Hamming Distance: %d\n", distance);
 					break;
 		/*countSubstrPattern*/	
 		case 2:  printf("\n===== COUNT SUBSTRING PATTERN =====\n");
@@ -75,7 +77,9 @@ int main () {
 					scanf("%d", &n);
 					input1[strcspn(input1, "\n")] = 0; //strcspn searches for the \n character and delimits it
 					int skew = getSkew(input1, n);
-					printf("Skew: %d", skew);
+					
+					if (skew == -1) printf("n is out of bounds!\n"); //display error message if out of bounds
+					else printf("Skew: %d", skew);
 					break;
 		/*getMaxSkewN*/	
 		case 5:  printf("\n===== GET MAX SKEW =====\n");
@@ -85,7 +89,9 @@ int main () {
 					scanf("%d", &n);
 					input1[strcspn(input1, "\n")] = 0; //strcspn searches for the \n character and delimits it
 					int maxSkew = getMaxSkewN(input1, n);
-					printf("Maximum Skew: %d\n", maxSkew);
+					
+					if (maxSkew == -1) printf("n is out of bounds!\n"); //display error message if out of bounds
+					else printf("Maximum Skew: %d\n", maxSkew);
 					break;
 		/*getMaxSkewN*/	
 		case 6:  printf("\n===== GET MIN SKEW =====\n");
@@ -95,7 +101,9 @@ int main () {
 					scanf("%d", &n);
 					input1[strcspn(input1, "\n")] = 0; //strcspn searches for the \n character and delimits it
 					int minSkew = getMinSkewN(input1, n);
-					printf("Minimum Skew: %d\n", minSkew);
+					
+					if (minSkew == -1) printf("n is out of bounds!\n"); //display error message if out of bounds
+					else printf("Minimum Skew: %d\n", minSkew);
 					break;
 		}
 	} while (choice != 7);

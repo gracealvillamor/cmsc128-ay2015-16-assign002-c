@@ -17,8 +17,7 @@ int getHammingDistance(char str1[], char str2[]) {
 
 	if ((str1len != str2len) || (str1len <= 0) || (str2len <= 0) ) {
 		//if string lenth of the two strings are unequal or equal to 0 or negative, return error message
-		printf("Error! Strings are not equal!\n");
-		return 0;
+		return -1;
 	} else {
 		//if equal, then count the inversions by comparing the 2 strings
 		for(i = 0; i < strlen(str1); i++) {
@@ -81,6 +80,12 @@ int isValidString(char str[], char alphabet[]) {
 int getSkew(char str[], int n) {
 	int i, skew = 0;
 
+	//check if n is valid
+	if(n <= 0 || n > strlen(str)) {
+		//break the function
+		return -1;
+	}
+
 	for(i = 0; i < n; i++) {
 		if(str[i] == 'G') {
 			// if G is in position i, increment skew
@@ -106,7 +111,7 @@ int getMaxSkewN(char str[], int n) {
 	//check if n is valid
 	if(n <= 0 || n > strlen(str)) {
 		//break the function
-		return 0;
+		return -1;
 	}
 
 	for(i = 0; i < n; i++) {
@@ -134,7 +139,7 @@ int getMinSkewN(char str[], int n) {
 	//check if n is valid
 	if(n <= 0 || n > strlen(str)) {
 		//break the function
-		return 0;
+		return -1;
 	}
 
 	for(i = 0; i < n; i++) {
