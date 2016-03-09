@@ -6,6 +6,10 @@
 
 #include<string.h>
 
+/*
+	Given 2 strings, this function computes for the number of characters that differ in ith position from position 1 to
+strlen(str1)
+*/
 int getHammingDistance(char str1[], char str2[]) {
 	int str1len = strlen(str1)-1; //gets the length of str1
 	int str2len = strlen(str2)-1; //gets the length of str2
@@ -28,10 +32,11 @@ int getHammingDistance(char str1[], char str2[]) {
 			
 		return distance;
 	}
-
-
 }
 
+/*
+	Given 2 strings, this function computes for the number of occurences pattern string appeared in original string
+*/
 int countSubstrPattern(char original[], char pattern[]) {
 	int i = 0, count = 0;
 
@@ -44,9 +49,11 @@ int countSubstrPattern(char original[], char pattern[]) {
 	}
 
 	return count;
-
 }
 
+/*
+	This function returns true if the string str is a valid string based on the letters of alphabet. Otherwise, false.
+*/
 int isValidString(char str[], char alphabet[]) {
 	//returns true if all elements of the string are in the user-given alphabet string
 	int flag;
@@ -62,14 +69,15 @@ int isValidString(char str[], char alphabet[]) {
 			flag = 0;
 			break;
 		}
-
 		temp++;
 	}
 	
 	return flag;
-
 }
 
+/*
+	This function returns the number of Gs minus the number of Cs in the first n nucleotides
+*/
 int getSkew(char str[], int n) {
 	int i, skew = 0;
 
@@ -86,6 +94,9 @@ int getSkew(char str[], int n) {
 	return skew;
 }
 
+/*
+	This function returns the maximum number of Gs minus the number of Cs in the first n nucleotides
+*/
 int getMaxSkewN(char str[], int n) {
 	int i, currentSkew, maxSkew;
 
@@ -99,7 +110,10 @@ int getMaxSkewN(char str[], int n) {
 	}
 
 	for(i = 0; i < n; i++) {
+		//get the skew of the current index
 	 	currentSkew = getSkew(str, i+1);
+
+	 	//assign the higher skew count
 		if(currentSkew > maxSkew) {
 			maxSkew = currentSkew;
 		}
@@ -108,6 +122,9 @@ int getMaxSkewN(char str[], int n) {
 	return maxSkew;
 }
 
+/*
+	This function returns the minimum number of Gs minus the number of Cs in the first n nucleotides
+*/
 int getMinSkewN(char str[], int n) {
 	int i, currentSkew, minSkew;
 
@@ -121,7 +138,10 @@ int getMinSkewN(char str[], int n) {
 	}
 
 	for(i = 0; i < n; i++) {
+		//get the skew of the current index
 	 	currentSkew = getSkew(str, i+1);
+
+	 	//assign the lower skew count
 		if(currentSkew < minSkew) {
 			minSkew = currentSkew;
 		}

@@ -1,3 +1,9 @@
+/*
+	GRACEAL S. VILLAMOR
+	AB - 3L
+	SIMPLE BIOINFORMATICS LIBRARY
+*/
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -11,6 +17,7 @@ int main () {
 	input1 = (char *) malloc (sizeof(char));
 	input2 = (char *) malloc (sizeof(char));
 
+	//menu
 	do {
 		printf("\n\t\t====== SIMPLE BIOINFORMATICS LIBRARY =====");
 		printf("\n\t\t=       [1] Get Hamming Distance         =");
@@ -95,17 +102,3 @@ int main () {
 
 	return 0;
 }
-
-/*
-git remote add origin https://github.com/gracealvillamor/cmsc128-ay2015-16-assign002-c.git
-git push -u origin master
-*/
-
-/*
-echo "# cmsc128-ay2015-16-assign002-c" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/gracealvillamor/cmsc128-ay2015-16-assign002-c.git
-git push -u origin master
-*/
