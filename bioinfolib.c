@@ -109,4 +109,8 @@ int main () {
 	} while (choice != 7);
 
 	return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4509b34b9a032bc58320d408fdebe5c064c28cd9
