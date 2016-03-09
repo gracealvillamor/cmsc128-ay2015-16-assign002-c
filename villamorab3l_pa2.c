@@ -88,18 +88,32 @@ int getSkew(char str[], int n) {
 	for(i = 0; i < n; i++) {
 		if(str[i] == 'G') {
 			// if G is in position i, increment skew
-				skew++;
-			} else if (str[i] == 'C') {
-				// else if C is in position i, decrement skew
-				skew--;
-			}
+			skew++;
+		} else if (str[i] == 'C') {
+			// else if C is in position i, decrement skew
+			skew--;
+		}
 	} 
 
 	printf("Skew: %d", skew);
 }
 
 int getMaxSkewN(char str[], int n) {
+	int i, skew, = 0, maxskew = 0, len = strlen(str);
+	char temp[len];
 
+	for(i = 0; i < n; i++) {
+	 	strcpy(temp,str);
+	} 
+	
+	skew = getSkew(temp,n);
+	
+	if(maxskew < skew) {
+		maxskew = skew;
+		printf("Max skew: %d", maxskew);
+	}
+
+	return 0;
 }
 
 int getMinSkewN(char str[], int n) {
