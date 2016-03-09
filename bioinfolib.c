@@ -95,17 +95,3 @@ int main () {
 
 	return 0;
 }
-
-/*
-git remote add origin https://github.com/gracealvillamor/cmsc128-ay2015-16-assign002-c.git
-git push -u origin master
-*/
-
-/*
-echo "# cmsc128-ay2015-16-assign002-c" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/gracealvillamor/cmsc128-ay2015-16-assign002-c.git
-git push -u origin master
-*/
