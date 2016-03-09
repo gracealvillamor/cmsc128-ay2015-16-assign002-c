@@ -99,7 +99,7 @@ int getSkew(char str[], int n) {
 }
 
 int getMaxSkewN(char str[], int n) {
-	int i, skew, = 0, maxskew = 0, len = strlen(str);
+	int i, skew = 0, maxskew = 0, len = strlen(str);
 	char temp[len];
 
 	for(i = 0; i < n; i++) {
@@ -110,14 +110,28 @@ int getMaxSkewN(char str[], int n) {
 	
 	if(maxskew < skew) {
 		maxskew = skew;
-		printf("Max skew: %d", maxskew);
 	}
-
+	
+	printf("Max skew: %d", maxskew);
 	return 0;
 }
 
 int getMinSkewN(char str[], int n) {
+	int i, skew = 0, minskew = 0, len = strlen(str);
+	char temp[len];
 
+	for(i = 0; i < n; i++) {
+	  strcpy(temp,str);
+	} 
+	
+	skew = getSkew(temp,n);
+	
+	if(minskew > skew) {
+		minskew = skew;
+	}
+	
+	printf("Min skew: %d", minskew);
+	return 0;
 }
 
 int main () {
